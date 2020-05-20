@@ -1,0 +1,5 @@
+git status 查看当前文件修改新建状态
+
+git add . 将代码保存到本地代码库中
+
+git commit -m “提交消息”
