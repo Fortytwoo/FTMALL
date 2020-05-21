@@ -61,7 +61,6 @@ export default {
     // 若为200，则服务端密码验证正确，返回登录成功，并且跳转到home页面
       this.$refs.loginFormRef.validate(async (valid) => {
         if (!valid) return
-        // eslint-disable-next-line no-unused-vars
         const { data: res } = await this.$http.post('login', this.loginForm
         )
         if (res.meta.status !== 200) return (this.$message.error('登录失败'))

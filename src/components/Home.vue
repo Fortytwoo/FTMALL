@@ -19,7 +19,8 @@
         unique-opened
         :collapse ='collapse'
         :collapse-transition = 'collapseTransition'
-        router>
+        router
+        :default-active = 'activePath'>
           <!-- 一级菜单 -->
           <el-submenu :index= "''+item.id" v-for=" item in menulist" :key="item.id"
           >
@@ -33,7 +34,8 @@
               <span unselectable="on" onselectstart="return false;" style="-moz-user-select:none;">{{item.authName}}</span>
             </template>
             <!-- 二级菜单 -->
-            <el-menu-item :index="'/'+item1.path" v-for=" item1 in item.children" :key="item1.id">
+            <el-menu-item :index="'/'+item1.path" v-for=" item1 in item.children" :key="item1.id"
+            @click="seveNavState('/'+item1.path)">
               <template slot="title">
                 <!-- 图标 -->
                 <i class="el-icon-menu"></i>
@@ -45,7 +47,7 @@
         </el-menu>
       </el-aside>
       <!-- 页面主体 -->
-      <el-main>Main
+      <el-main>
           <router-view />
       </el-main>
     </el-container>
@@ -68,13 +70,14 @@ export default {
         reports: 'iconfont icon-baobiao'
       },
       collapse: false,
-      collapseTransition: false
-    //   collapse1: 0
+      collapseTransition: false,
+      activePath: window.sessionStorage.getItem('activePath')
     }
   },
   methods: {
     clearToken () {
       window.sessionStorage.clear('token')
+      window.sessionStorage.clear('activePath')
       this.$message.success('退出成功')
       this.$router.push('/login')
     },
@@ -85,14 +88,10 @@ export default {
     },
     toggleCollapse () {
       this.collapse = !this.collapse
-    //   this.collapse1 = 0
+    },
+    seveNavState (activePath) {
+      window.sessionStorage.setItem('activePath', activePath)
     }
-    // opToggle () {
-    //   if (this.collapse1 === 0) {
-    //     this.collapse = !this.collapse
-    //     this.collapse1++
-    //   }
-    // }
   },
   comments: {
   }
