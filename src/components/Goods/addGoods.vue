@@ -167,7 +167,7 @@
                   <el-col :offset="9">
                     <el-image
                          style="width: 50px; height: 50px"
-                         src="https://i.loli.net/2020/05/29/H4ZvPEL9XmFi3aY.png">
+                         src="http://cdn.lujingru42.top/success.png">
                       </el-image>
                   </el-col>
                   <el-col :offset="6">添加成功！ 将在{{this.totalTime}}秒后 自动跳转至商品管理</el-col>
@@ -266,18 +266,15 @@ export default {
       const { data: res } = await this.$http.get('categories', { params: { type: 3 } })
       if (res.meta.status !== 200) return this.$message.error(res.meta.msg)
       this.CategoriesInfoList = res.data
-      console.log(this.CategoriesInfoList)
     },
     // 级联选择器点击事件处理函数
     checkedCasc () {
       // 将获得的分类列表ID转换为字符串分割的ID
       if (this.selectedKeys.length === 3) {
         // 赋值到提交表单的参数内
-        console.log(this.selectedKeys)
         // 将包含三级分类参数的值赋给goods_catAll 供后续提交表单使用
         this.basicFormInfo.goods_catAll = String(this.selectedKeys)
         this.basicFormInfo.goods_cat = String(this.selectedKeys[2])
-        console.log(this.basicFormInfo.goods_cat)
       } else {
         this.selectedKeys = []
         this.$message.error('请选择三级分类！')
@@ -285,7 +282,6 @@ export default {
     },
     // 校验 基本信息 表单 并进入 商品参数 界面
     nextParameter () {
-      console.log(this.basicFormInfo.goods_cat)
       this.$refs.basicFormRef.validate((valid) => {
         if (!valid) return
         if (this.basicFormInfo.goods_cat === '') return this.$message.error('请选择商品分类！')
@@ -313,7 +309,6 @@ export default {
           }
         }
         this.catattr = res.data
-        console.log(this.catattr)
       }
     },
     // 点击参数设置里的多选框触发的事件处理函数
@@ -347,7 +342,6 @@ export default {
         tempObj = { attr_id: this.catattr[index0].attr_id, attr_value: this.catattr[index0].attr_vals }
         this.basicFormInfo.attrs.push(tempObj)
       }
-      console.log(this.basicFormInfo.attrs)
       this.activeTab = 'image'
       this.tabShow.image = false
       this.tabShow.stepsActive++
@@ -364,7 +358,6 @@ export default {
       this.tabShow.complete = false
       this.tabShow.stepsActive++
       this.tabShow.stepsActive++
-      console.log(this.basicFormInfo)
       this.atime()
     },
     // 切换步骤时的操作事件处理函数
@@ -393,8 +386,6 @@ export default {
         default:
           return this.$message.error('错误的Tab!')
       }
-      console.log(typeof this.activeTab)
-      console.log(this.stepsActive)
     },
     // 提交添加商品表单
     async addGoodsput () {
@@ -425,7 +416,6 @@ export default {
           delete this.basicFormInfo.pics[index]
         }
       }
-      console.log(this.basicFormInfo.pics)
     },
     // 上传成功的钩子函数
     uploadsuccess (response) {
@@ -433,7 +423,6 @@ export default {
       temp = { pic: response.data.tmp_path }
       this.basicFormInfo.pics.push(temp)
       temp = {}
-      console.log(this.basicFormInfo.pics)
     },
     // 上传图片组件----预览大图
     preView (file) {

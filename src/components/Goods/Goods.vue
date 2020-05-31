@@ -90,7 +90,6 @@ export default {
       this.getGoodset.total = res.data.total
       const pagenum = parseInt(res.data.pagenum)
       this.getGoodset.pagenum = pagenum
-      console.log(res)
     },
     addGoodsForm () {
       this.$router.push('/addGoods')
@@ -103,7 +102,6 @@ export default {
         cancelButtonText: '取消',
         type: 'warning'
       }).then(async () => {
-        console.log(this.$confirm.row.goods_id)
         const { data: res } = await this.$http.delete(`goods/${this.$confirm.row.goods_id}`)
         if (res.meta.status !== 200) {
           this.$message.error(res.meta.msg)

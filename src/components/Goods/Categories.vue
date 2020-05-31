@@ -242,7 +242,6 @@ export default {
         cancelButtonText: '取消',
         type: 'warning'
       }).then(async () => {
-        console.log(this.$confirm.row)
         const { data: res } = await this.$http.delete(`categories/${this.$confirm.row.cat_id}`)
         if (res.meta.status !== 200) {
           this.$message.error(res.meta.msg)

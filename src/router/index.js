@@ -1,21 +1,33 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Login from './../components/Login'
-import Home from './../components/Home'
-import Welcome from './../components/Welcome'
+// import Login from './../components/Login'
+const Login = () => import(/* webpackChunkName:"login_home_welcome" */ './../components/Login')
+// import Home from './../components/Home'
+const Home = () => import(/* webpackChunkName:"login_home_welcome" */ './../components/Home')
+// import Welcome from './../components/Welcome'
+const Welcome = () => import(/* webpackChunkName:"login_home_welcome" */ './../components/Welcome')
 // Users
-import Users from './../components/Users/Users'
+// import Users from './../components/Users/Users'
+const Users = () => import(/* webpackChunkName:"Users" */ './../components/Users/Users')
 // Rights内的组件
-import Roles from '../components/Rights/Roles'
-import Rights from './../components/Rights/Rights'
+// import Roles from '../components/Rights/Roles'
+const Roles = () => import(/* webpackChunkName:"Roles_Rights" */ './../components/Rights/Roles')
+// import Rights from './../components/Rights/Rights'
+const Rights = () => import(/* webpackChunkName:"Roles_Rights" */ './../components/Rights/Rights')
 // Goods内的组件
-import Goods from './../components/Goods/Goods'
-import Params from '../components/Goods/Params'
-import Categories from '../components/Goods/Categories'
+// import Goods from './../components/Goods/Goods'
+const Goods = () => import(/* webpackChunkName:"Goods_Categories_addGoods_Params" */ './../components/Goods/Goods')
+// import Params from '../components/Goods/Params'
+const Params = () => import(/* webpackChunkName:"Goods_Categories_addGoods_Params" */ './../components/Goods/Params')
+// import Categories from '../components/Goods/Categories'
+const Categories = () => import(/* webpackChunkName:"Goods_Categories_addGoods_Params" */ './../components/Goods/Categories')
 // Reports内的组件
-import Orders from './../components/Orders/Orders'
-import Reports from './../components/Reports/Reports'
-import addGoods from '../components/Goods/addGoods'
+// import Orders from './../components/Orders/Orders'
+const Orders = () => import(/* webpackChunkName:"Orders" */ './../components/Orders/Orders')
+// import Reports from './../components/Reports/Reports'
+const Reports = () => import(/* webpackChunkName:"Reports" */ './../components/Reports/Reports')
+// import addGoods from '../components/Goods/addGoods'
+const addGoods = () => import(/* webpackChunkName:"Goods_Categories_addGoods_Params" */ './../components/Goods/addGoods')
 Vue.use(VueRouter)
 
 const routes = [

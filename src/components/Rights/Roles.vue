@@ -187,7 +187,6 @@ export default {
       const { data: res } = await this.$http.get('roles')
       if (res.meta.status !== 200) return this.$message.error(res.meta.msg)
       this.rolesLsitInfo = res.data
-      this.$message.success('已刷新！')
     },
 
     // 添加角色
@@ -244,9 +243,7 @@ export default {
     },
     // 提交 编辑角色
     async rewriteRolesInfoput (row) {
-      console.log(row)
       const { data: res } = await this.$http.put(`roles/${row.id}`, this.rewriteRolesInfo)
-      console.log(res.data)
       if (res.meta.status !== 200) return this.$message.error(res.meta.msg)
       const tempname = this.rewriteRolesInfo.roleName
       this.rewriteRolesInfoclose()
@@ -258,7 +255,6 @@ export default {
     managementRolesInfoopen (row) {
       this.getmanagementRolesInfo(row)
       this.treeRolesId = row.id
-      console.log(row.id)
     },
     managementRolesInfoclose () {
       const arr = []
@@ -296,12 +292,10 @@ export default {
     },
     // 增加权限
     async addmanagement (id, rids) {
-      console.log(id, rids)
       const { data: res } = await this.$http.post(
         `roles/${id}/rights`,
         { rids: rids }
       )
-      console.log(res)
       if (res.meta.status !== 200) return this.$message.error(res.meta.msg)
       this.getRolesList()
       this.managementRolesInfoclose()

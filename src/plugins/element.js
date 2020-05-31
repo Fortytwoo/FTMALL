@@ -39,6 +39,11 @@ import { CheckboxGroup } from 'element-ui'
 import { Image } from 'element-ui'
 import { Timeline } from 'element-ui'
 import { TimelineItem } from 'element-ui'
+import { Carousel } from 'element-ui'
+import { CarouselItem } from 'element-ui'
+import { Divider } from 'element-ui'
+import { Link } from 'element-ui'
+import { Backtop } from 'element-ui'
 Vue.use(Button)
 Vue.use(Form)
 Vue.use(FormItem)
@@ -79,5 +84,10 @@ Vue.use(CheckboxGroup)
 Vue.use(Image)
 Vue.use(Timeline)
 Vue.use(TimelineItem)
+Vue.use(Carousel)
+Vue.use(CarouselItem)
+Vue.use(Divider)
+Vue.use(Link)
+Vue.use(Backtop)
 Vue.prototype.$message = Message
 Vue.prototype.$confirm = MessageBox

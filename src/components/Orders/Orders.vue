@@ -155,13 +155,10 @@ export default {
       this.ordersList = res.data.goods
       this.getOrdersSet.pagenum = Number(res.data.pagenum)
       this.pageLayout.total = res.data.total
-      console.log(this.pageLayout.total)
     },
     positionGoods (row) {
-      console.log(row)
     },
     editAddressOpen (row) {
-      console.log(row)
       this.editAddressShow = true
     },
     editAddressClose () {

@@ -3,7 +3,7 @@
     <!-- 头部区 -->
     <el-header>
       <div>
-        <img src="./../assets/heima.png" alt />
+        <img src="./../assets/logo.png" alt  id="headlogo"/>
         <span unselectable="on" onselectstart="return false;" style="-moz-user-select:none;">电商后台管理系统</span>
       </div>
       <el-button type="info" @click="clearToken">退出</el-button>
@@ -53,9 +53,12 @@
           <router-view />
       </el-main>
     </el-container>
+    <IcpFoot></IcpFoot>
   </el-container>
 </template>
 <script>
+// 导入Icp备案信息
+import IcpFoot from './IcpFoot'
 export default {
 // 定义生命周期函数
   created () {
@@ -98,6 +101,9 @@ export default {
     }
   },
   comments: {
+  },
+  components: {
+    IcpFoot: IcpFoot
   }
 
 }
@@ -143,5 +149,10 @@ export default {
 }
 .iconfont{
     margin-right: 10px;
+}
+#headlogo{
+  height: 40px;
+  width: 40px;
+  padding-left: 20px;
 }
 </style>
