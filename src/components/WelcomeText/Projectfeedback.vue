@@ -5,15 +5,15 @@
             <el-col :span="12" :pull="2">服务端代码及所需数据库文件：</el-col>
             <el-col :span="12" :push="1">
               <!-- github -->
-              <i class="iconfont el-icon-aliGitHub"></i>  Github：<el-link type="primary" :href="projectUrl.github">{{this.projectUrl.github}}</el-link>
+              <i class="iconfont el-icon-aliGitHub"></i>  Github：<el-link target="_blank" type="primary" :href="projectUrl.github">{{this.projectUrl.github}}</el-link>
                 </el-col>
               <!-- 服务端数据文件 -->
             <el-col :span="12">
-                   <i class="el-icon-download"></i> 下载地址：<el-link type="primary" :href="projectUrl.serverSqlFile">http://cdn.lujingru42.top//shared/Vue-FtwwMall....zip</el-link>
+                   <i class="el-icon-download"></i> 下载地址：<el-link target="_blank" type="primary" :href="projectUrl.serverSqlFile">http://cdn.lujingru42.top//shared/Vue-FtwwMall....zip</el-link>
                 </el-col>
             <!-- 码云 -->
             <el-col :span="12" :push="1">
-              <i class="iconfont el-icon-aligitee-fill-round"></i>  码云：<el-link type="primary" :href="projectUrl.gitee">{{this.projectUrl.gitee}}</el-link>
+              <i class="iconfont el-icon-aligitee-fill-round"></i>  码云：<el-link target="_blank" type="primary" :href="projectUrl.gitee">{{this.projectUrl.gitee}}</el-link>
                 </el-col>
               <!-- 个人搭建服务端API -->
             <el-col :span="12" :pull="2" id="ServerAPI">
@@ -21,22 +21,22 @@
                     <el-tooltip class="item" effect="dark" :content="tip" placement="top-end">
                     <i class="el-icon-info"></i>
                     </el-tooltip>
-                    <el-link type="primary" :href="projectUrl.privateServerAPI" ref="privateServerAPIRef" >{{this.projectUrl.privateServerAPI}}</el-link>
+                    <el-link target="_blank" type="primary" :href="projectUrl.privateServerAPI" ref="privateServerAPIRef" >{{this.projectUrl.privateServerAPI}}</el-link>
                 </el-col>
         </el-row>
         <el-row>
             <el-col :span="24">如何联系：</el-col>
             <!-- github -->
             <el-col :span="24" :push="1">
-              <i class="iconfont el-icon-aliGitHub"></i>  Github：<el-link type="primary" :href="personalUrl.geitee">{{this.personalUrl.geitee}}</el-link>
+              <i class="iconfont el-icon-aliGitHub"></i>  Github：<el-link target="_blank" type="primary" :href="personalUrl.geitee">{{this.personalUrl.geitee}}</el-link>
                 </el-col>
                 <!-- 码云 -->
             <el-col :span="24" :push="1">
-              <i class="iconfont el-icon-aligitee-fill-round"></i>  码云：<el-link type="primary" :href="personalUrl.github">{{this.personalUrl.github}}</el-link>
+              <i class="iconfont el-icon-aligitee-fill-round"></i>  码云：<el-link target="_blank" type="primary" :href="personalUrl.github">{{this.personalUrl.github}}</el-link>
                 </el-col>
                 <!-- 邮箱 -->
             <el-col :span="24" :push="1">
-               <i class="el-icon-message"></i> 邮箱：<el-link type="primary" :href="personalUrl.email">liemail42@163.com</el-link>
+               <i class="el-icon-message"></i> 邮箱：<el-link target="_blank" type="primary" :href="personalUrl.email">liemail42@163.com</el-link>
                 </el-col>
         </el-row>
     </div>

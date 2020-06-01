@@ -3,7 +3,7 @@
         <el-card>
             <el-carousel indicator-position="outside" >
               <el-carousel-item v-for="item in swriptImgUrl" :key="item.id">
-                <a :href="item.href">
+                <a :href="item.href" target="_blank">
                     <el-image
                     :src="item.imageUlr"
                     fit="contain"

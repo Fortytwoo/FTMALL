@@ -1,7 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zn-CN">
 
 <head>
+  <title>电商后台管理系统</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+  <!-- <%= htmlWebpackPlugin.options.isPord? '' : 'dev - '%> -->
+  <!-- <% if(htmlWebpackPlugin.options.isPord) {%> -->
   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
   <script src="https://cdn.staticfile.org/vue-router/3.0.1/vue-router.min.js"></script>
   <script src="https://cdn.staticfile.org/axios/0.18.0/axios.min.js"></script>
@@ -13,12 +20,6 @@
     <script src="https://cdn.jsdelivr.net/npm/vue-quill-editor@3.0.4/dist/vue-quill-editor.js"></script>
       <!-- element-ui 的 js 文件 -->
   <script src="https://cdn.staticfile.org/element-ui/2.8.2/index.js"></script>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-  <title><%= htmlWebpackPlugin.options.isPord? '' : 'dev - '%>电商后台管理系统</title>
-  <% if(htmlWebpackPlugin.options.isPord) {%>
   <!-- nprogress 的样式表文件 -->
   <link rel="stylesheet" href="https://cdn.staticfile.org/nprogress/0.2.0/nprogress.min.css" />
   <!-- 富文本编辑器 的样式表文件 -->
@@ -28,9 +29,7 @@
   <!-- element-ui 的样式表文件 -->
   <link rel="stylesheet" href="https://cdn.staticfile.org/element-ui/2.8.2/theme-chalk/index.css" />
 
-
-
-  <% } %>
+  <!-- <% } %> -->
 </head>
 
 <body>
