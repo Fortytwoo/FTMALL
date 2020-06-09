@@ -204,11 +204,13 @@ export default {
         }
       }
     },
+    // 改变每页大小
     changeSize (newSize) {
       this.getOrdersSet.pagesize = newSize
       this.getOrdersSet.pagenum = 1
       this.getOrdersList()
     },
+    // 改变当前页码
     changepage (newPage) {
       this.getOrdersSet.pagenum = newPage
       this.getOrdersList()

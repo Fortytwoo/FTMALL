@@ -204,11 +204,6 @@ export default {
     bottom: 0;
     margin: auto;
   }
-.el-carousel__item{
-    background-image: url("http://cdn.lujingru42.top/www/web/image/gitee.png");
-    background-size: 6000px;
-    display: inline-block;
-}
 .title{
     font-size: 35px;
 }

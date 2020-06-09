@@ -3,15 +3,15 @@ module.exports = {
     //   发布模式
     config.when(process.env.NODE_ENV === 'production', config => {
       config.entry('app').clear().add('./src/main-prod.js')
-      // config.set('externals', {
-      //   vue: 'Vue',
-      //   'vue-router': 'VueRouter',
-      //   axios: 'axios',
-      //   lodash: '_',
-      //   echarts: 'echarts',
-      //   nprogress: 'NProgress',
-      //   'vue-quill-editor': 'VueQuillEditor'
-      // })
+      config.set('externals', {
+        vue: 'Vue',
+        'vue-router': 'VueRouter',
+        axios: 'axios',
+        lodash: '_',
+        echarts: 'echarts',
+        nprogress: 'NProgress',
+        'vue-quill-editor': 'VueQuillEditor'
+      })
       //   根据编译模式设置网页名称
       config.plugin('html').tap(args => {
         args[0].isProd = true

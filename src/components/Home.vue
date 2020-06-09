@@ -2,10 +2,13 @@
   <el-container class="home-container">
     <!-- 头部区 -->
     <el-header>
-      <div>
+      <el-tooltip class="item" effect="light" content="点击进入项目概况页" placement="bottom-end">
+      <div @click="jumpWelcome" style="cursor: pointer">
         <img src="./../assets/logo.png" alt  id="headlogo"/>
         <span unselectable="on" onselectstart="return false;" style="-moz-user-select:none;">电商后台管理系统</span>
       </div>
+        </el-tooltip>
+      <div  id="Icon-home"><i class="El-icon-S-Home" /></div>
       <el-button type="info" @click="clearToken">退出</el-button>
     </el-header>
     <!-- 页面主题 -->
@@ -24,10 +27,7 @@
         router
         :default-active = 'activePath'>
           <!-- 一级菜单 -->
-          <el-submenu :index= "''+item.id" v-for=" item in menulist" :key="item.id"
-          >
-          <!-- @click.native="opToggle" -->
-          <!-- 这是点击打开的函数，待修复 -->
+          <el-submenu :index= "''+item.id" v-for=" item in menulist" :key="item.id">
             <!-- 一级菜单模板区 -->
             <template slot="title">
               <!-- 图标 -->
@@ -98,6 +98,9 @@ export default {
     },
     seveNavState (activePath) {
       window.sessionStorage.setItem('activePath', activePath)
+    },
+    jumpWelcome () {
+      this.$router.push('/Welcome')
     }
   },
   comments: {

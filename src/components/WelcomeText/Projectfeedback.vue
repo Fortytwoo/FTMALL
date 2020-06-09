@@ -28,11 +28,11 @@
             <el-col :span="24">如何联系：</el-col>
             <!-- github -->
             <el-col :span="24" :push="1">
-              <i class="iconfont el-icon-aliGitHub"></i>  Github：<el-link target="_blank" type="primary" :href="personalUrl.geitee">{{this.personalUrl.geitee}}</el-link>
+              <i class="iconfont el-icon-aliGitHub"></i>  Github：<el-link target="_blank" type="primary" :href="personalUrl.github">{{this.personalUrl.github}}</el-link>
                 </el-col>
                 <!-- 码云 -->
             <el-col :span="24" :push="1">
-              <i class="iconfont el-icon-aligitee-fill-round"></i>  码云：<el-link target="_blank" type="primary" :href="personalUrl.github">{{this.personalUrl.github}}</el-link>
+              <i class="iconfont el-icon-aligitee-fill-round"></i>  码云：<el-link target="_blank" type="primary" :href="personalUrl.gitee">{{this.personalUrl.gitee}}</el-link>
                 </el-col>
                 <!-- 邮箱 -->
             <el-col :span="24" :push="1">
@@ -56,7 +56,7 @@ export default {
         privateServerAPI: 'http://49.233.20.174:3456/api/private/v1/'
       },
       personalUrl: {
-        geitee: 'https://gitee.com/Fortytwoo',
+        gitee: 'https://gitee.com/Fortytwoo',
         github: 'https://github.com/Fortytwoo',
         email: 'mailto: liemail42@163.com',
         zhihu: ''

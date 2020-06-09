@@ -7,16 +7,16 @@ import VueQuillEditor from 'vue-quill-editor'
 
 // 导入阿里图标库
 import './assets/css/global.css'
-import './plugins/element.js'
+// import './plugins/element.js'
 // 样式表
 
 // 导入字体图标
 import './assets/fonts/iconfont.css'
 import TreeTable from 'vue-table-with-tree-grid'
 // 导入富文本编辑器样式
-import 'quill/dist/quill.core.css' // import styles
-import 'quill/dist/quill.snow.css' // for snow theme
-import 'quill/dist/quill.bubble.css' // for bubble theme
+// import 'quill/dist/quill.core.css' // import styles
+// import 'quill/dist/quill.snow.css' // for snow theme
+// import 'quill/dist/quill.bubble.css' // for bubble theme
 // 导入NProgress js和css文件
 import 'nprogress/nprogress.css' // 导入NProgress组件样式表
 import NProgress from 'nprogress'
